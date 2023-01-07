@@ -3,6 +3,7 @@ import styled from "styled-components";
 // components
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
+import SocialIcons from "../subComponents/SocialIcons";
 
 const Container = styled.div`
   padding: 2rem;
@@ -30,6 +31,7 @@ const Main = () => {
       <Container>
         <PowerButton />
         <LogoComponent />
+        <SocialIcons />
       </Container>
     </MainContainer>
   );
