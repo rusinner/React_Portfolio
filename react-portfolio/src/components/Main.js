@@ -53,6 +53,16 @@ const Main = () => {
             <h3>Say Hi...</h3>
           </a>
         </Contact>
+        <Contact>
+          <a
+            style={{ color: "inherit" }}
+            href="mailto:mavropoulos_th@outlook.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Say Hi...</h3>
+          </a>
+        </Contact>
       </Container>
     </MainContainer>
   );
