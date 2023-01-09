@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
 // components
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
@@ -25,6 +27,14 @@ const MainContainer = styled.div`
   }
 `;
 
+const Contact = styled.div`
+  color: ${(props) => props.theme.text};
+  position: absolute;
+  top: 3rem;
+  right: calc(1rem + 2vw);
+  text-decoration: none;
+  z-index: 1;
+`;
 const Main = () => {
   return (
     <MainContainer>
@@ -32,6 +42,17 @@ const Main = () => {
         <PowerButton />
         <LogoComponent />
         <SocialIcons />
+
+        <Contact>
+          <a
+            style={{ color: "inherit" }}
+            href="mailto:mavropoulos_th@outlook.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Say Hi...</h3>
+          </a>
+        </Contact>
       </Container>
     </MainContainer>
   );

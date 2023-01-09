@@ -13,7 +13,7 @@ const Power = styled.button`
   transform: translate(-50%, 0);
 
   background-color: 3FCF6F4;
-  padding: 0.2rem;
+
   border-radius: 50%;
   border: 1px solid #000;
   width: 2.5rem;
@@ -41,7 +41,7 @@ const PowerButton = () => {
   return (
     <Power>
       <NavLink to="/">
-        <PowerBtn width={30} height={30} fill="currentColor" />
+        <PowerBtn width={50} height={50} fill="currentColor" />
       </NavLink>
     </Power>
   );
