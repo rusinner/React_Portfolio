@@ -82,14 +82,6 @@ const SKILLS = styled(NavLink)`
   cursor: pointer;
 `;
 
-const rotate = keyframes`
-from{
-  trasform:rotate(0);
-  }
-  to{
-    transform:rotate(360deg);
-  }
-`;
 const Center = styled.button`
   position: absolute;
   top: ${(props) => (props.click ? "82%" : "50%")};
@@ -113,12 +105,26 @@ const Center = styled.button`
     padding-top: 1rem;
   }
 `;
+
+const DarkDiv = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #a80071;
+  right: 50%;
+  width: ${(props) => (props.click ? "50%" : "0%")};
+  height: ${(props) => (props.click ? "100%" : "0%")};
+  z-index: 1;
+  transition: height 0.5s ease, width 1s ease 0.5s;
+`;
+
 const Main = () => {
   const [click, setclick] = useState(false);
 
   const handleClick = () => setclick(!click);
   return (
     <MainContainer>
+      <DarkDiv click={click} />
       <Container>
         <PowerButton />
         <LogoComponent />
@@ -147,7 +153,7 @@ const Main = () => {
         <BLOG to="/blog">
           <h3>Blog</h3>
         </BLOG>
-        <WORK to="/work">
+        <WORK to="/work" click={click}>
           <h3>Work</h3>
         </WORK>
 
