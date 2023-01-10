@@ -133,8 +133,8 @@ const Main = () => {
         <Center click={click}>
           <Logo
             onClick={() => handleClick()}
-            width={click ? 100 : 200}
-            height={click ? 100 : 200}
+            width={click ? 100 : 340}
+            height={click ? 100 : 340}
             fill="currentColor"
           />
           <span>click here</span>
