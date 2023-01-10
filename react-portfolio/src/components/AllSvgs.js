@@ -73,20 +73,165 @@ export const YouTube = (props) => {
   );
 };
 
-export const YinYang = (props) => {
+export const Logo = (props) => {
   return (
     <svg
-      aria-hidden="true"
-      data-prefix="fas"
-      data-icon="yin-yang"
-      className="prefix__svg-inline--fa prefix__fa-yin-yang prefix__fa-w-16"
+      id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 496 512"
+      x={0}
+      y={0}
+      viewBox="0 0 318.9 273.9"
+      xmlSpace="preserve"
       {...props}
     >
+      <style>
+        {
+          "@keyframes oDbdMYEe_draw{to{stroke-dashoffset:0}}@keyframes oDbdMYEe_fade{0%,95.1219512195122%{stroke-opacity:1}to{stroke-opacity:0}}.st0{fill:none;stroke:#f400a5;stroke-miterlimit:10}"
+        }
+      </style>
       <path
-        fill={props.fill}
-        d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"
+        className="st0"
+        d="M109.8 185.8h99.5l-49.8 86.1Z"
+        style={{
+          strokeDasharray: "299 301",
+          strokeDashoffset: 300,
+          animation: "oDbdMYEe_draw 2666ms linear 0ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m208.4 186.3-48.9 84.6-48.9-84.6h97.8m1.7-1H108.9l50.6 87.6 50.6-87.6z"
+        style={{
+          strokeDasharray: "597 599",
+          strokeDashoffset: 598,
+          animation: "oDbdMYEe_draw 2666ms linear 88ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m109.7 181.4 49.8-86.2 49.7 86.2Z"
+        style={{
+          strokeDasharray: "299 301",
+          strokeDashoffset: 300,
+          animation: "oDbdMYEe_draw 2666ms linear 177ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m159.5 96.2 48.9 84.6h-97.8l48.9-84.6m0-2-50.6 87.6h101.2l-50.6-87.6z"
+        style={{
+          strokeDasharray: "597 599",
+          strokeDashoffset: 598,
+          animation: "oDbdMYEe_draw 2666ms linear 266ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="M55.7 94h99.5l-49.7 86.1Z"
+        style={{
+          strokeDasharray: "299 301",
+          strokeDashoffset: 300,
+          animation: "oDbdMYEe_draw 2666ms linear 355ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m154.3 94.5-48.8 84.6-48.9-84.6h97.7m1.8-1H54.9l50.7 87.6 50.5-87.6z"
+        style={{
+          strokeDasharray: "597 599",
+          strokeDashoffset: 598,
+          animation: "oDbdMYEe_draw 2666ms linear 444ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="M164.7 94h99.5l-49.7 86.1Z"
+        style={{
+          strokeDasharray: "299 301",
+          strokeDashoffset: 300,
+          animation: "oDbdMYEe_draw 2666ms linear 533ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m263.3 94.5-48.8 84.6-48.9-84.6h97.7m1.8-1H163.9l50.6 87.6 50.6-87.6z"
+        style={{
+          strokeDasharray: "597 599",
+          strokeDashoffset: 598,
+          animation: "oDbdMYEe_draw 2666ms linear 622ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="M1.7 1h99.5L51.5 87.2Z"
+        style={{
+          strokeDasharray: "299 301",
+          strokeDashoffset: 300,
+          animation: "oDbdMYEe_draw 2666ms linear 711ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="M100.3 1.5 51.5 86.2 2.6 1.5h97.7m1.8-1H.9l50.7 87.7L102.1.5z"
+        style={{
+          strokeDasharray: "597 599",
+          strokeDashoffset: 598,
+          animation: "oDbdMYEe_draw 2666ms linear 800ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="M217.7 1h99.5l-49.7 86.2Z"
+        style={{
+          strokeDasharray: "299 301",
+          strokeDashoffset: 300,
+          animation: "oDbdMYEe_draw 2666ms linear 888ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m316.3 1.5-48.8 84.7-48.9-84.7h97.7m1.8-1H216.9l50.6 87.7L318.1.5z"
+        style={{
+          strokeDasharray: "597 599",
+          strokeDashoffset: 598,
+          animation: "oDbdMYEe_draw 2666ms linear 977ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m55.7 89.4 49.8-86.2 49.7 86.2Z"
+        style={{
+          strokeDasharray: "299 301",
+          strokeDashoffset: 300,
+          animation: "oDbdMYEe_draw 2666ms linear 1066ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m105.5 4.2 48.9 84.6H56.6l48.9-84.6m0-2L54.9 89.9h101.2L105.5 2.2z"
+        style={{
+          strokeDasharray: "597 599",
+          strokeDashoffset: 598,
+          animation: "oDbdMYEe_draw 2666ms linear 1155ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m164.7 89.4 49.8-86.2 49.7 86.2Z"
+        style={{
+          strokeDasharray: "299 301",
+          strokeDashoffset: 300,
+          animation: "oDbdMYEe_draw 2666ms linear 1244ms forwards",
+        }}
+      />
+      <path
+        className="st0"
+        d="m214.5 4.2 48.9 84.6h-97.8l48.9-84.6m0-2-50.6 87.6h101.2L214.5 2.2z"
+        style={{
+          strokeDasharray: "597 599",
+          strokeDashoffset: 598,
+          animation: "oDbdMYEe_draw 2666ms linear 1333ms forwards",
+        }}
       />
     </svg>
   );

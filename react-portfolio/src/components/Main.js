@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
 // import Blog from
 
@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
+import { Logo } from "./AllSvgs";
 
 const Container = styled.div`
   padding: 2rem;
@@ -81,13 +82,57 @@ const SKILLS = styled(NavLink)`
   cursor: pointer;
 `;
 
+const rotate = keyframes`
+from{
+  trasform:rotate(0);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+`;
+const Center = styled.button`
+  position: absolute;
+  top: ${(props) => (props.click ? "82%" : "50%")};
+  left: ${(props) => (props.click ? "92%" : "50%")};
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+
+  & > :first-child {
+  }
+
+  & > :last-child {
+    display: ${(props) => (props.click ? "none" : "inline-block")};
+    padding-top: 1rem;
+  }
+`;
 const Main = () => {
+  const [click, setclick] = useState(false);
+
+  const handleClick = () => setclick(!click);
   return (
     <MainContainer>
       <Container>
         <PowerButton />
         <LogoComponent />
         <SocialIcons />
+
+        <Center click={click}>
+          <Logo
+            onClick={() => handleClick()}
+            width={click ? 100 : 200}
+            height={click ? 100 : 200}
+            fill="currentColor"
+          />
+          <span>click here</span>
+        </Center>
 
         <Contact>
           <a
