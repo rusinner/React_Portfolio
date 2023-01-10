@@ -84,9 +84,9 @@ const SKILLS = styled(NavLink)`
 
 const Center = styled.button`
   position: absolute;
-  top: ${(props) => (props.click ? "82%" : "50%")};
-  left: ${(props) => (props.click ? "92%" : "50%")};
-  transform: translate(-50%, -50%);
+  top: ${(props) => (props.click ? "81%" : "50%")};
+  left: ${(props) => (props.click ? "85%" : "50%")};
+  transform: translate(-40%, -50%);
   border: none;
   outline: none;
   cursor: pointer;
@@ -95,7 +95,7 @@ const Center = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 1s ease;
+  transition: all 1s ease-out;
 
   & > :first-child {
   }
@@ -133,8 +133,8 @@ const Main = () => {
         <Center click={click}>
           <Logo
             onClick={() => handleClick()}
-            width={click ? 100 : 340}
-            height={click ? 100 : 340}
+            width={click ? 100 : 230}
+            height={click ? 100 : 230}
             fill="currentColor"
           />
           <span>click here</span>
