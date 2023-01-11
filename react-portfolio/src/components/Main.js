@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 // import Blog from
 
 // components
@@ -148,22 +149,32 @@ const Main = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <h3>Say Hi...</h3>
+            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              Say Hi...
+            </motion.h3>
           </a>
         </Contact>
         <BLOG to="/blog">
-          <h3>Blog</h3>
+          <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            Blog
+          </motion.h3>
         </BLOG>
         <WORK to="/work" click={click}>
-          <h3>Work</h3>
+          <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            Work
+          </motion.h3>
         </WORK>
 
         <BottomBar>
           <ABOUT to="/about">
-            <h3>About.</h3>
+            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              About.
+            </motion.h3>
           </ABOUT>
           <SKILLS to="/skills">
-            <h3>My Skills.</h3>
+            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              My Skills.
+            </motion.h3>
           </SKILLS>
         </BottomBar>
       </Container>
