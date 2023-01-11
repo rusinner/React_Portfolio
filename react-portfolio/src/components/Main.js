@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 // import Blog from
 
@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
+import Intro from "./Intro";
 import { Logo } from "./AllSvgs";
 
 const Container = styled.div`
@@ -166,6 +167,7 @@ const Main = () => {
           </SKILLS>
         </BottomBar>
       </Container>
+      {click ? <Intro click={click} /> : null}
     </MainContainer>
   );
 };
