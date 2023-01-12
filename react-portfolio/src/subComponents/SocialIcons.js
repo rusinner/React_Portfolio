@@ -14,6 +14,9 @@ const Icons = styled.div`
   & > *:not(:last-child) {
     margin: 0.5rem 0;
   }
+  @media screen and (max-width: 768px) {
+    left: 1.5rem;
+  }
 `;
 
 const Line = styled.span`

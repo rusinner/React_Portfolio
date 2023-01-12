@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Logo = styled.h1`
   display: inline-block;
@@ -11,10 +12,18 @@ const Logo = styled.h1`
   left: 2rem;
   top: 2rem;
   z-index: 3;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    top: 1.6rem;
+  }
 `;
 
 const LogoComponent = (props) => {
-  return <Logo color={props.theme}>VooPROGue</Logo>;
+  return (
+    <NavLink to="/">
+      <Logo color={props.theme}>VooPROGue</Logo>
+    </NavLink>
+  );
 };
 
 export default LogoComponent;

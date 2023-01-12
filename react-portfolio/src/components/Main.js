@@ -49,6 +49,10 @@ const BLOG = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    right: 2.5rem;
+    top: 52%;
+  }
 `;
 const WORK = styled(NavLink)`
   color: ${(props) => props.theme.text};
@@ -59,6 +63,9 @@ const WORK = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    left: 2.5rem;
+  }
 `;
 
 const BottomBar = styled.div`
@@ -88,7 +95,7 @@ const Center = styled.button`
   position: absolute;
   top: ${(props) => (props.click ? "81%" : "50%")};
   left: ${(props) => (props.click ? "85%" : "50%")};
-  transform: translate(-40%, -50%);
+  transform: translate(-50%, -50%);
   border: none;
   outline: none;
   cursor: pointer;
