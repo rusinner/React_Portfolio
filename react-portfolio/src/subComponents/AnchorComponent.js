@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "../components/AllSvgs";
 import { Anchor } from "../components/AllSvgs";
@@ -23,6 +23,26 @@ const Slider = styled.div`
 const AnchorComponent = () => {
   const ref = useRef(null);
   const hiddenRef = useRef(null);
+
+  useEffect(() => {
+    //anchor movement on scroll
+    const handleScroll = () => {
+      let scrollPosition = window.pageYOffset;
+      let windowSize = window.innerHeight;
+      let bodyHeight = document.body.offsetHeight;
+
+      let diff = Math.max(bodyHeight - (scrollPosition + windowSize));
+
+      let diffP = (diff * 100) / (bodyHeight - windowSize);
+
+      ref.current.style.transform = `translateY(${-diffP}%)`;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Container>
       <Slider ref={ref}>
