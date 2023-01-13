@@ -55,7 +55,9 @@ const Date = styled.span`
   padding: 0.5rem 0;
 `;
 
-const Container = styled(motion.div)``;
+const Container = styled(motion.div)`
+  z-index: 5;
+`;
 
 // Framer motion configuration
 const Item = {

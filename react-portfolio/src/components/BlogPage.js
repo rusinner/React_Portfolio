@@ -24,6 +24,8 @@ const Container = styled.div`
   height: auto;
   position: relative;
   padding-top: 8rem;
+  padding-bottom: 2rem;
+  padding-left: 0.5rem;
 `;
 
 const Center = styled.div`
@@ -61,7 +63,7 @@ const BlogPage = () => {
   const [numbers, setNumbers] = useState(0);
 
   useEffect(() => {
-    let num = (window.innerHeight - 70) / 30;
+    let num = (window.innerHeight - 30) / 30;
     setNumbers(parseInt(num));
   }, []);
 

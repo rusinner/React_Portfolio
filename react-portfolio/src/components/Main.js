@@ -20,6 +20,9 @@ const MainContainer = styled.div`
   height: 100vh;
   overflow-x: hidden;
   position: relative;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   h2,
   h3,

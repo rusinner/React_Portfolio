@@ -12,18 +12,18 @@ import PowerButton from "../subComponents/PowerButton";
 import BigTitle from "../subComponents/BigTitle";
 
 const Box = styled.div`
-background-color:${(props) => props.theme.color}
-width:100vw;
-height:100vh;
-position:relative;
-display:flex;
-justify-content:space-evenly;
-align-items:center;
- @media screen and (max-width: 768px) {
+  background-color: ${(props) => props.theme.body};
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @media screen and (max-width: 768px) {
     flex-direction: column;
-    justify-content:space-between;
-    gap:3rem;
-    padding:2rem;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem;
   }
 `;
 
@@ -83,6 +83,9 @@ const Description = styled.div`
 const MySkillsPage = () => {
   return (
     <ThemeProvider theme={lightTheme}>
+      <LogoComponent theme="light" />
+      <SocialIcons theme="light" />
+      <PowerButton />
       <Box>
         <Main>
           <Title>
