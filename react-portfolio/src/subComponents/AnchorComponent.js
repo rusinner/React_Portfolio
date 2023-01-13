@@ -14,7 +14,12 @@ const Slider = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
+`;
+const PreDisplay = styled.div`
+  position: fixed;
+  top: 0;
+  right: 2rem;
 `;
 
 const AnchorComponent = () => {
@@ -33,6 +38,12 @@ const AnchorComponent = () => {
       let diffP = (diff * 100) / (bodyHeight - windowSize);
 
       ref.current.style.transform = `translateY(${-diffP}%)`;
+
+      if (window.pageYOffset > 5) {
+        hiddenRef.current.style.display = "none";
+      } else {
+        hiddenRef.current.style.display = "block";
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -42,6 +53,18 @@ const AnchorComponent = () => {
 
   return (
     <Container>
+      <PreDisplay ref={hiddenRef} className="hidden">
+        <Anchor
+          style={{
+            position: "relative",
+            right: "1.4rem",
+            transform: "rotate(135deg)",
+          }}
+          width={70}
+          height={70}
+          fill="currentColor"
+        />
+      </PreDisplay>
       <Slider ref={ref}>
         {[...Array(25)].map((x, id) => (
           <Link
