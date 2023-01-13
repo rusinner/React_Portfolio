@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 // import { NavLink } from "react-router-dom";
 import { Github, Facebook, Instagram } from "../components/AllSvgs";
 const Icons = styled.div`
@@ -19,7 +20,7 @@ const Icons = styled.div`
   }
 `;
 
-const Line = styled.span`
+const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
   background-color: ${(props) => props.theme.text};
@@ -27,7 +28,11 @@ const Line = styled.span`
 const SocialIcons = () => {
   return (
     <Icons>
-      <div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1 }}
+      >
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -36,8 +41,12 @@ const SocialIcons = () => {
         >
           <Github width={35} height={35} fill="currentColor" />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1.2 }}
+      >
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -46,8 +55,12 @@ const SocialIcons = () => {
         >
           <Facebook width={35} height={32} fill="currentColor" />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1.4 }}
+      >
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -56,9 +69,21 @@ const SocialIcons = () => {
         >
           <Instagram width={35} height={35} fill="currentColor" />
         </a>
-      </div>
+      </motion.div>
 
-      <Line />
+      <Line
+        initial={{
+          height: 0,
+        }}
+        animate={{
+          height: "8rem",
+        }}
+        transition={{
+          type: "spring",
+          duration: 1,
+          delay: 0.8,
+        }}
+      />
     </Icons>
   );
 };
