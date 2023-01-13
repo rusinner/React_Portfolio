@@ -15,9 +15,6 @@ const Slider = styled.div`
   justify-content: center;
   flex-direction: column;
   transform: translateY(-50%);
-  .chain {
-    transform: rotate(135deg);
-  }
 `;
 
 const AnchorComponent = () => {
@@ -56,7 +53,11 @@ const AnchorComponent = () => {
           />
         ))}
         <Anchor
-          style={{ position: "relative", right: "1.3rem" }}
+          style={{
+            position: "relative",
+            right: "1.4rem",
+            transform: "rotate(135deg)",
+          }}
           width={70}
           height={70}
           fill="currentColor"
