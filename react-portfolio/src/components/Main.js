@@ -29,6 +29,9 @@ const MainContainer = styled.div`
     font-family: "Karla", sans-serif;
     font-weight: 500;
   }
+
+  @media screen and (max-width: 768px) {
+  }
 `;
 
 const Contact = styled.div`
