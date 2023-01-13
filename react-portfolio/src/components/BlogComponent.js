@@ -20,6 +20,9 @@ const Box = styled(motion.div)`
     background-color: ${(props) => props.theme.text};
     transition: all 0.3s ease;
   }
+  @media screen and (max-width: 576px) {
+    height: auto;
+  }
 `;
 
 const Image = styled.div`

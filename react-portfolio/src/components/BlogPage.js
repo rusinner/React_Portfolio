@@ -26,6 +26,9 @@ const Container = styled.div`
   padding-top: 8rem;
   padding-bottom: 2rem;
   padding-left: 0.5rem;
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+  }
 `;
 
 const Center = styled.div`
@@ -40,7 +43,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
   grid-gap: calc(1rem + 2vw);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     grid-template-columns: repeat(1, minmax(calc(10rem + 15vw), 1fr));
   }
 `;
@@ -89,7 +92,7 @@ const BlogPage = () => {
             ))}
           </Grid>
         </Center>
-        <BigTitle text="BLOG" top="5rem" left="5rem" />
+        <BigTitle text="BLOG" top="5rem" left="4rem" />
       </Container>
     </MainContainer>
   );
