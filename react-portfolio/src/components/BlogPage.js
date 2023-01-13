@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import img from "../assets/Images/blog-bg.jpg";
 import LogoComponent from "../subComponents/LogoComponent";
@@ -7,8 +7,10 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { Blogs } from "../data/BlogData";
 import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/AnchorComponent";
+import BigTitle from "../subComponents/BigTitle";
+import { motion } from "framer-motion";
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   background-image: url(${img});
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,14 +43,43 @@ const Grid = styled.div`
   }
 `;
 
+//framer motion congif
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.5,
+      duration: 0.5,
+    },
+  },
+};
+
 const BlogPage = () => {
+  const [numbers, setNumbers] = useState(0);
+
+  useEffect(() => {
+    let num = (window.innerHeight - 70) / 30;
+    setNumbers(parseInt(num));
+  }, []);
+
   return (
-    <MainContainer>
+    <MainContainer
+      variants={container}
+      initial="hidden"
+      animate="show"
+      exit={{
+        opacity: 0,
+        transition: { duration: 0.5 },
+      }}
+    >
       <Container>
         <LogoComponent />
         <PowerButton />
         <SocialIcons />
-        <AnchorComponent />
+        <AnchorComponent numbers={numbers} />
         <Center>
           <Grid>
             {Blogs.map((blog) => (
@@ -56,6 +87,7 @@ const BlogPage = () => {
             ))}
           </Grid>
         </Center>
+        <BigTitle text="BLOG" top="5rem" left="5rem" />
       </Container>
     </MainContainer>
   );
