@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 // import { NavLink } from "react-router-dom";
 import { Github, Facebook, Instagram } from "../components/AllSvgs";
+import { voopTheme } from "../components/Themes";
 const Icons = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,9 +24,10 @@ const Icons = styled.div`
 const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
-  background-color: ${(props) => props.theme.text};
+  background-color: ${(props) =>
+    (props.theme = "voop" ? voopTheme.text : voopTheme.body)};
 `;
-const SocialIcons = () => {
+const SocialIcons = (props) => {
   return (
     <Icons>
       <motion.div
@@ -39,7 +41,11 @@ const SocialIcons = () => {
           href="https://github.com/rusinner"
           rel="noreferrer"
         >
-          <Github width={35} height={35} fill="currentColor" />
+          <Github
+            width={35}
+            height={35}
+            fill={props.theme === "voop" ? voopTheme.text : voopTheme.body}
+          />
         </a>
       </motion.div>
       <motion.div
@@ -53,7 +59,11 @@ const SocialIcons = () => {
           href="https://facebook.com/vooprogue"
           rel="noreferrer"
         >
-          <Facebook width={35} height={32} fill="currentColor" />
+          <Facebook
+            width={35}
+            height={32}
+            fill={props.theme === "voop" ? voopTheme.text : voopTheme.body}
+          />
         </a>
       </motion.div>
       <motion.div
@@ -67,7 +77,11 @@ const SocialIcons = () => {
           href="https://instagram.com/vooprogue"
           rel="noreferrer"
         >
-          <Instagram width={35} height={35} fill="currentColor" />
+          <Instagram
+            width={35}
+            height={35}
+            fill={props.theme === "voop" ? voopTheme.text : voopTheme.body}
+          />
         </a>
       </motion.div>
 

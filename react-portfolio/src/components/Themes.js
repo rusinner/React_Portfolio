@@ -15,3 +15,11 @@ export const darkTheme = {
   bodyRgba: "0,0,0",
   textRgba: "252, 246, 244",
 };
+
+export const voopTheme = {
+  body: "#000000",
+  text: "#a80071",
+  fontFamily: "'Source Sans Pro', sans-serif",
+  bodyRgba: "0,0,0",
+  textRgba: "252, 246, 244",
+};
