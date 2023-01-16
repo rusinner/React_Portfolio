@@ -11,7 +11,7 @@ import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
 import BigTitle from "../subComponents/BigTitle";
 
-const Box = styled.div`
+const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   height: 400vh;
   position: relative;
@@ -27,6 +27,19 @@ const Main = styled.ul`
   display: flex;
   color: white;
 `;
+
+const MotionContainer = {
+  hidden: { opacity: 0, width: "0" },
+  show: {
+    opacity: 1,
+    width: "100%",
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
+      duration: 0.5,
+    },
+  },
+};
 
 const WorkPage = () => {
   useEffect(() => {
@@ -48,7 +61,15 @@ const WorkPage = () => {
       <SocialIcons theme="voop" />
       <PowerButton />
 
-      <Box>
+      <Box
+        variants={MotionContainer}
+        initial="hidden"
+        animate="show"
+        exit={{
+          opacity: 0,
+          transition: { duration: 0.5 },
+        }}
+      >
         <Main ref={ref}>
           {Work.map((d) => (
             <Card key={d.id} data={d} />

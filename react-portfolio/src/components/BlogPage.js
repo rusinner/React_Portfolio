@@ -51,7 +51,7 @@ const Grid = styled.div`
 
 //framer motion config
 const MotionContainer = {
-  hidden: { opacity: 0, rtransform: "scaleX(0)" },
+  hidden: { opacity: 0, transform: "scaleX(0)" },
   show: {
     opacity: 1,
     transform: "scaleX(1)",

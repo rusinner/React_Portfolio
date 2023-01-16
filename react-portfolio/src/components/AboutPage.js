@@ -2,6 +2,7 @@ import React from "react";
 import { keyframes, ThemeProvider } from "styled-components";
 import styled from "styled-components";
 import { darkTheme } from "./Themes";
+import { motion } from "framer-motion";
 
 import astronaut from "../assets/Images/spaceman.png";
 import LogoComponent from "../subComponents/LogoComponent";
@@ -9,13 +10,14 @@ import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
 
-const Box = styled.div`
+const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
   position: relative;
   display: flex;
   overflow: hidden;
+  transform-origin: 50% 100%;
 `;
 
 const float = keyframes`
@@ -36,7 +38,7 @@ const Spaceman = styled.div`
   }
 `;
 
-const Main = styled.div`
+const Main = styled(motion.div)`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
@@ -55,6 +57,32 @@ const Main = styled.div`
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
 `;
+const SpacemanImg = styled(motion.img)``;
+
+const MotionContainer = {
+  hidden: { opacity: 0, transform: "scaleY(0)" },
+  show: {
+    opacity: 1,
+    transform: "scaleY(1)",
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.5,
+      duration: 0.5,
+    },
+  },
+};
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+};
 const AboutPage = () => {
   return (
     <ThemeProvider theme={darkTheme}>
@@ -62,13 +90,21 @@ const AboutPage = () => {
       <SocialIcons theme="voop" />
       <PowerButton />
 
-      <Box>
+      <Box
+        variants={MotionContainer}
+        initial="hidden"
+        animate="show"
+        exit={{
+          opacity: 0,
+          transition: { duration: 0.5 },
+        }}
+      >
         <ParticleComponent theme="dark" />
 
         <Spaceman>
-          <img src={astronaut} alt="astronaut" />
+          <SpacemanImg variants={Item} src={astronaut} alt="astronaut" />
         </Spaceman>
-        <Main>
+        <Main variants={Item}>
           I'm a front-end developer located in Greece. I love to create simple
           yet beautiful websites with great user experience.
           <br />

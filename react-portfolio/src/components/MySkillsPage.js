@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { lightTheme } from "./Themes";
 
 import { Design, Develope } from "./AllSvgs";
@@ -9,9 +10,8 @@ import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
-import BigTitle from "../subComponents/BigTitle";
 
-const Box = styled.div`
+const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
@@ -19,6 +19,8 @@ const Box = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  transform-origin: 50% 100%;
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +30,7 @@ const Box = styled.div`
   }
 `;
 
-const Main = styled.div`
+const Main = styled(motion.div)`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   background-color: ${(props) => props.theme.body};
@@ -82,6 +84,31 @@ const Description = styled.div`
     margin-left: 2rem;
   }
 `;
+
+const MotionContainer = {
+  hidden: { opacity: 0, transform: "scaleY(0)" },
+  show: {
+    opacity: 1,
+    transform: "scaleY(1)",
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+      duration: 0.6,
+    },
+  },
+};
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+};
 const MySkillsPage = () => {
   return (
     <ThemeProvider theme={lightTheme}>
@@ -89,9 +116,17 @@ const MySkillsPage = () => {
       <SocialIcons theme="light" />
       <PowerButton />
 
-      <Box>
+      <Box
+        variants={MotionContainer}
+        initial="hidden"
+        animate="show"
+        exit={{
+          opacity: 0,
+          transition: { duration: 0.5 },
+        }}
+      >
         <ParticleComponent theme="light" />
-        <Main>
+        <Main variants={Item}>
           <Title>
             <Develope width={40} height={40} /> Developer
           </Title>
@@ -111,7 +146,7 @@ const MySkillsPage = () => {
             <p>VScode, Github </p>
           </Description>
         </Main>
-        <Main>
+        <Main variants={Item}>
           <Title>
             <Design width={40} height={40} /> Designer
           </Title>
