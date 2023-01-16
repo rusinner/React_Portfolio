@@ -35,7 +35,7 @@ const MotionContainer = {
     width: "100%",
     transition: {
       delayChildren: 0.5,
-      staggerChildren: 0.2,
+      staggerChildren: 0.5,
       duration: 0.5,
     },
   },
