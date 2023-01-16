@@ -16,7 +16,7 @@ const MainContainer = styled(motion.div)`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  transform-origin: 100% 50%;
+  float: right;
 `;
 
 const Container = styled.div`
@@ -51,10 +51,10 @@ const Grid = styled.div`
 
 //framer motion config
 const MotionContainer = {
-  hidden: { opacity: 0, transform: "scale(0, 1)" },
+  hidden: { opacity: 0, width: "0px" },
   show: {
     opacity: 1,
-    transform: "scale(1,1)",
+    width: "100vw",
     transition: {
       delayChildren: 0.5,
       staggerChildren: 0.5,
