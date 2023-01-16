@@ -75,7 +75,7 @@ const AnchorComponent = (props) => {
             className="chain"
           />
         ))}
-        <Anchor
+        {/* <Anchor
           style={{
             position: "relative",
             right: "1.4rem",
@@ -84,7 +84,7 @@ const AnchorComponent = (props) => {
           width={70}
           height={70}
           fill="currentColor"
-        />
+        /> */}
       </Slider>
     </Container>
   );
