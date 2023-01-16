@@ -24,8 +24,6 @@ const Icons = styled.div`
 const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
-  background-color: ${(props) =>
-    (props.theme = "voop" ? voopTheme.text : voopTheme.body)};
 `;
 const SocialIcons = (props) => {
   return (
@@ -96,6 +94,10 @@ const SocialIcons = (props) => {
           type: "spring",
           duration: 1,
           delay: 0.8,
+        }}
+        style={{
+          backgroundColor:
+            props.theme === "voop" ? voopTheme.text : voopTheme.body,
         }}
       />
     </Icons>
