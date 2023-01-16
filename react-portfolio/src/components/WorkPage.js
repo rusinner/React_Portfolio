@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
 import { darkTheme } from "./Themes";
@@ -11,8 +11,7 @@ import Card from "../subComponents/Card";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  width: 100vw;
-  height: 100vh;
+  height: 400vh;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -27,6 +26,19 @@ const Main = styled.ul`
 `;
 
 const WorkPage = () => {
+  useEffect(() => {
+    let element = ref.current;
+
+    const rotate = () => {
+      element.style.transform = `translateX(${-window.pageYOffset}px)`;
+    };
+
+    window.addEventListener("scroll", rotate);
+
+    return () => window.removeEventListener("scroll", rotate);
+  }, []);
+
+  const ref = useRef(null);
   return (
     <ThemeProvider theme={darkTheme}>
       <LogoComponent theme="light" />
@@ -34,7 +46,7 @@ const WorkPage = () => {
       <PowerButton />
 
       <Box>
-        <Main>
+        <Main ref={ref}>
           {Work.map((d) => (
             <Card key={d.id} data={d} />
           ))}
