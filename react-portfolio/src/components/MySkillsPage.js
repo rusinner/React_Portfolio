@@ -10,6 +10,7 @@ import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
+import BigTitle from "../subComponents/BigTitle";
 
 const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
@@ -36,7 +37,7 @@ const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   padding: 2rem;
   width: 30vw;
-  height: 60vh;
+  height: 48vh;
   z-index: 3;
   line-height: 1.5;
   font-family: "Ubuntu Mono", monospace;
@@ -169,6 +170,7 @@ const MySkillsPage = () => {
             </ul>
           </Description>
         </Main>
+        <BigTitle text="SKILLS" top="74%" right="30%" />
       </Box>
     </ThemeProvider>
   );
