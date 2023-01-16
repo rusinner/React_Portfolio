@@ -1,13 +1,15 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
 import { darkTheme } from "./Themes";
+import { motion } from "framer-motion";
 
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
+import BigTitle from "../subComponents/BigTitle";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -15,6 +17,7 @@ const Box = styled.div`
   position: relative;
   display: flex;
   overflow: hidden;
+  align-items: center;
 `;
 const Main = styled.ul`
   position: fixed;
@@ -51,6 +54,7 @@ const WorkPage = () => {
             <Card key={d.id} data={d} />
           ))}
         </Main>
+        <BigTitle text="WORK" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
   );

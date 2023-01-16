@@ -16,6 +16,7 @@ const MainContainer = styled(motion.div)`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  transform-origin: 100% 50%;
 `;
 
 const Container = styled.div`
@@ -48,12 +49,12 @@ const Grid = styled.div`
   }
 `;
 
-//framer motion congif
-const container = {
-  hidden: { opacity: 0 },
+//framer motion config
+const MotionContainer = {
+  hidden: { opacity: 0, rtransform: "scaleX(0)" },
   show: {
     opacity: 1,
-
+    transform: "scaleX(1)",
     transition: {
       delayChildren: 0.5,
       staggerChildren: 0.5,
@@ -72,7 +73,7 @@ const BlogPage = () => {
 
   return (
     <MainContainer
-      variants={container}
+      variants={MotionContainer}
       initial="hidden"
       animate="show"
       exit={{
