@@ -20,6 +20,7 @@ const MainContainer = styled.div`
   height: 100vh;
   overflow-x: hidden;
   position: relative;
+  font-family: "Ubuntu Mono", monospace;
   ::-webkit-scrollbar {
     display: none;
   }
