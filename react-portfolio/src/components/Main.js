@@ -35,6 +35,13 @@ const MainContainer = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 1.9rem;
+    }
   }
 `;
 
@@ -45,6 +52,8 @@ const Contact = styled.div`
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    top: 5.7rem;2  }
 `;
 
 const BLOG = styled(NavLink)`
@@ -57,7 +66,6 @@ const BLOG = styled(NavLink)`
   z-index: 1;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    right: 2.5rem;
     top: 52%;
   }
 `;
@@ -71,7 +79,7 @@ const WORK = styled(NavLink)`
   z-index: 1;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    left: 2.5rem;
+    left: 2rem;
   }
 `;
 
@@ -180,7 +188,7 @@ const Main = () => {
           </a>
         </Contact>
         <BLOG to="/blog">
-          <motion.h3
+          <motion.h2
             initial={{
               y: -200,
               transition: { type: "spring", duration: 1.5, delay: 1 },
@@ -193,10 +201,10 @@ const Main = () => {
             whileTap={{ scale: 0.9 }}
           >
             Blog
-          </motion.h3>
+          </motion.h2>
         </BLOG>
         <WORK to="/work" click={click}>
-          <motion.h3
+          <motion.h2
             initial={{
               y: -200,
               transition: { type: "spring", duration: 1.5, delay: 1 },
@@ -209,12 +217,12 @@ const Main = () => {
             whileTap={{ scale: 0.9 }}
           >
             Work
-          </motion.h3>
+          </motion.h2>
         </WORK>
 
         <BottomBar>
           <ABOUT to="/about">
-            <motion.h3
+            <motion.h2
               initial={{
                 y: 200,
                 transition: { type: "spring", duration: 1.5, delay: 1 },
@@ -227,10 +235,10 @@ const Main = () => {
               whileTap={{ scale: 0.9 }}
             >
               About.
-            </motion.h3>
+            </motion.h2>
           </ABOUT>
           <SKILLS to="/skills">
-            <motion.h3
+            <motion.h2
               initial={{
                 y: 200,
                 transition: { type: "spring", duration: 1.5, delay: 1 },
@@ -243,7 +251,7 @@ const Main = () => {
               whileTap={{ scale: 0.9 }}
             >
               My Skills.
-            </motion.h3>
+            </motion.h2>
           </SKILLS>
         </BottomBar>
       </Container>

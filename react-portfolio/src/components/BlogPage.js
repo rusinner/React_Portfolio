@@ -54,10 +54,10 @@ const Grid = styled.div`
 ></script>;
 //framer motion config
 const MotionContainer = {
-  hidden: { opacity: 0, width: "0px" },
+  hidden: { opacity: 0, x: "100%" },
   show: {
     opacity: 1,
-    width: "100vw",
+    x: "0",
     transition: {
       delayChildren: 0.5,
       staggerChildren: 0.5,
@@ -81,6 +81,7 @@ const BlogPage = () => {
       animate="show"
       exit={{
         opacity: 0,
+        x: "-100%",
         transition: { duration: 0.5 },
       }}
     >

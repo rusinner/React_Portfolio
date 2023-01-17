@@ -49,7 +49,7 @@ const Main = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(0.6rem +1vw);
+  font-size: calc(0.6rem + 1vw);
   backdrop-filter: blur(4px);
   position: absolute;
   left: calc(5rem + 5vw);
@@ -60,12 +60,13 @@ const Main = styled(motion.div)`
 const SpacemanImg = styled(motion.img)``;
 
 const MotionContainer = {
-  hidden: { opacity: 0, width: "0px" },
+  hidden: { opacity: 0, y: "100vh" },
   show: {
     opacity: 1,
-    width: "100%",
+    y: "0",
+
     transition: {
-      delayChildren: 0.5,
+      delayChildren: 1.5,
       staggerChildren: 0.5,
       duration: 0.5,
     },
@@ -74,12 +75,32 @@ const MotionContainer = {
 const Item = {
   hidden: {
     scale: 0,
+    x: "110vh",
+    y: "130vh",
   },
   show: {
     scale: 1,
+    x: "0",
+    y: "0",
     transition: {
       type: "spring",
-      duration: 0.5,
+      duration: 2.2,
+    },
+  },
+};
+const Text = {
+  hidden: {
+    scale: 0,
+    x: "10vh",
+    y: "-50vh",
+  },
+  show: {
+    scale: 1,
+    x: "0",
+    y: "0",
+    transition: {
+      type: "spring",
+      duration: 5.2,
     },
   },
 };
@@ -101,10 +122,7 @@ const AboutPage = () => {
       >
         <ParticleComponent theme="dark" />
 
-        <Spaceman>
-          <SpacemanImg variants={Item} src={astronaut} alt="astronaut" />
-        </Spaceman>
-        <Main variants={Item}>
+        <Main variants={Text}>
           I'm a front-end developer located in Greece. I love to create simple
           yet beautiful websites with great user experience.
           <br />
@@ -115,6 +133,9 @@ const AboutPage = () => {
           <br /> I believe everything is an Art when you put your consciousness
           in it. You can connect with me via social links.
         </Main>
+        <Spaceman>
+          <SpacemanImg variants={Item} src={astronaut} alt="astronaut" />
+        </Spaceman>
         <BigTitle text="ABOUT" top="10rem" left="5rem" />
       </Box>
     </ThemeProvider>

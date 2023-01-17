@@ -30,10 +30,11 @@ const Main = styled(motion.ul)`
 
 // framer motion
 const MotionContainer = {
-  hidden: { opacity: 0, width: "0" },
+  hidden: { opacity: 0, x: "-100%" },
   show: {
     opacity: 1,
-    width: "100%",
+    x: 0,
+
     transition: {
       delayChildren: 0.5,
       staggerChildren: 0.5,
@@ -68,6 +69,7 @@ const WorkPage = () => {
         animate="show"
         exit={{
           opacity: 0,
+          x: "-100%",
           transition: { duration: 0.5 },
         }}
       >

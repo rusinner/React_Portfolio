@@ -87,13 +87,14 @@ const Description = styled.div`
 `;
 
 const MotionContainer = {
-  hidden: { opacity: 0, transform: "scaleX(0)" },
+  hidden: { opacity: 0, y: "100vh" },
   show: {
     opacity: 1,
-    transform: "scaleX(1)",
+    y: "0",
+
     transition: {
-      delayChildren: 0.4,
-      staggerChildren: 0.2,
+      delayChildren: 0.8,
+      staggerChildren: 0.4,
       duration: 0.5,
     },
   },
@@ -123,6 +124,7 @@ const MySkillsPage = () => {
         animate="show"
         exit={{
           opacity: 0,
+          y: "100vh",
           transition: { duration: 0.5 },
         }}
       >
