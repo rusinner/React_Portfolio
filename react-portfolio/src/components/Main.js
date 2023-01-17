@@ -53,7 +53,7 @@ const Contact = styled.div`
   text-decoration: none;
   z-index: 1;
   @media screen and (max-width: 768px) {
-    top: 5.7rem;2  }
+    top: 5.5rem;2  }
 `;
 
 const BLOG = styled(NavLink)`
