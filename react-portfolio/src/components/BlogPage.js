@@ -16,7 +16,6 @@ const MainContainer = styled(motion.div)`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  float: right;
 `;
 
 const Container = styled.div`
@@ -48,7 +47,11 @@ const Grid = styled.div`
     grid-template-columns: repeat(1, minmax(calc(10rem + 15vw), 1fr));
   }
 `;
-
+<script
+  data-who="NAKER.IO"
+  src="https://d23jutsnau9x47.cloudfront.net/studio/v1.5.1/viewer.js"
+  data-option="{|id|:|63c5e95d6a3e92df9d648c59|}"
+></script>;
 //framer motion config
 const MotionContainer = {
   hidden: { opacity: 0, width: "0px" },

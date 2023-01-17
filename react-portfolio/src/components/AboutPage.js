@@ -18,7 +18,6 @@ const Box = styled(motion.div)`
   position: relative;
   display: flex;
   overflow: hidden;
-  transform-origin: 50% 100%;
 `;
 
 const float = keyframes`
@@ -61,10 +60,10 @@ const Main = styled(motion.div)`
 const SpacemanImg = styled(motion.img)``;
 
 const MotionContainer = {
-  hidden: { opacity: 0, transform: "scaleY(0)" },
+  hidden: { opacity: 0, width: "0px" },
   show: {
     opacity: 1,
-    transform: "scaleY(1)",
+    width: "100%",
     transition: {
       delayChildren: 0.5,
       staggerChildren: 0.5,

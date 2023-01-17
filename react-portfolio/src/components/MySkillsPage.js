@@ -20,7 +20,7 @@ const Box = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  transform-origin: 50% 100%;
+  transform-origin: 0% 100%;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -87,14 +87,14 @@ const Description = styled.div`
 `;
 
 const MotionContainer = {
-  hidden: { opacity: 0, transform: "scaleY(0)" },
+  hidden: { opacity: 0, transform: "scaleX(0)" },
   show: {
     opacity: 1,
-    transform: "scaleY(1)",
+    transform: "scaleX(1)",
     transition: {
-      delayChildren: 0.3,
+      delayChildren: 0.4,
       staggerChildren: 0.2,
-      duration: 0.6,
+      duration: 0.5,
     },
   },
 };
