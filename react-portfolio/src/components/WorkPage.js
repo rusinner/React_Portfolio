@@ -13,27 +13,28 @@ import BigTitle from "../subComponents/BigTitle";
 
 const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
-  height: 400vh;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   display: flex;
-  overflow: hidden;
   align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 `;
 const Main = styled(motion.ul)`
-  position: fixed;
+  position: absolute;
   top: 12rem;
-  left: calc(10rem + 15vw);
-  height: 40vh;
+  left: calc(2rem + 15vw);
+  height: auto;
   display: flex;
   color: white;
 `;
 
 // framer motion
 const MotionContainer = {
-  hidden: { opacity: 0, x: "-100%" },
+  hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    x: 0,
 
     transition: {
       delayChildren: 0.5,
@@ -45,18 +46,15 @@ const MotionContainer = {
 
 const WorkPage = () => {
   useEffect(() => {
-    let element = ref.current;
-
-    const rotate = () => {
-      element.style.transform = `translateX(${-window.pageYOffset}px)`;
-    };
-
-    window.addEventListener("scroll", rotate);
-
-    return () => window.removeEventListener("scroll", rotate);
+    // let element = ref.current;
+    // const rotate = () => {
+    //   element.style.transform = `translateX(${-window.pageYOffset}px)`;
+    // };
+    // window.addEventListener("scroll", rotate);
+    // return () => window.removeEventListener("scroll", rotate);
   }, []);
 
-  const ref = useRef(null);
+  // const ref = useRef(null);
   return (
     <ThemeProvider theme={darkTheme}>
       <LogoComponent theme="light" />
@@ -69,11 +67,11 @@ const WorkPage = () => {
         animate="show"
         exit={{
           opacity: 0,
-          x: "-100%",
+
           transition: { duration: 0.5 },
         }}
       >
-        <Main ref={ref}>
+        <Main>
           {Work.map((d) => (
             <Card key={d.id} data={d} />
           ))}

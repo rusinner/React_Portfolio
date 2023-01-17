@@ -12,6 +12,7 @@ const Box = styled(motion.li)`
   margin-right: 8rem;
   border-radius: 0 50px 0 50px;
   display: flex;
+
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid ${(props) => props.theme.body};

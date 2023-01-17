@@ -36,6 +36,9 @@ const Spaceman = styled.div`
     width: 100%;
     height: auto;
   }
+  @media screen and (max-width: 768px) {
+    top: 7%;
+  }
 `;
 
 const Main = styled(motion.div)`
@@ -56,6 +59,10 @@ const Main = styled(motion.div)`
   top: 10rem;
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
+  @media screen and (max-width: 768px) {
+    height: 50vh;
+    left: calc(3rem + 5vw);
+  }
 `;
 const SpacemanImg = styled(motion.img)``;
 
