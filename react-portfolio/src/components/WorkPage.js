@@ -19,7 +19,7 @@ const Box = styled(motion.div)`
   overflow: hidden;
   align-items: center;
 `;
-const Main = styled.ul`
+const Main = styled(motion.ul)`
   position: fixed;
   top: 12rem;
   left: calc(10rem + 15vw);
@@ -28,6 +28,7 @@ const Main = styled.ul`
   color: white;
 `;
 
+// framer motion
 const MotionContainer = {
   hidden: { opacity: 0, width: "0" },
   show: {
