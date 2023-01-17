@@ -26,6 +26,7 @@ const SubBox = styled.div`
   width: 50%;
   position: relative;
   display: flex;
+
   .pic {
     position: absolute;
     bottom: 0;
@@ -49,6 +50,12 @@ const Text = styled.div`
     color: #000000;
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
+    @media screen and (max-width: 768px) {
+      padding-top: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 8rem;
   }
 `;
 
