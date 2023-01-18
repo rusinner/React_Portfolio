@@ -36,8 +36,6 @@ const SubBox = styled.div`
     height: auto;
 
     @media screen and (max-width: 768px) {
-      background: #fcf6f4;
-      border-radius: 100% 100% 0 0;
       transform: translateY(-230px);
       opacity: 0.5;
     }
