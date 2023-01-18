@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import React from "react";
 
 const MotionContainer = {
-  hidden: { opacity: 0, x: window.innerWidth },
+  hidden: { opacity: 0, y: window.innerHeight },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
 
     transition: {
       delayChildren: 0.5,
@@ -23,7 +23,7 @@ const AnimatedPage = ({ children }) => {
         animate="show"
         exit={{
           opacity: 0,
-          x: window.innerWidth,
+          y: window.innerHeight,
 
           transition: { duration: 0.8 },
         }}

@@ -1,10 +1,11 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 
 import music from "../assets/audio/u-said-it-v13-1167.mp3";
 
-const Box = styled.div`
+const Box = styled(motion.div)`
   display: flex;
   cursor: pointer;
   position: fixed;
@@ -67,7 +68,17 @@ const SoundBar = () => {
     }
   };
   return (
-    <Box onClick={() => handleClick()}>
+    <Box
+      onClick={() => handleClick()}
+      initial={{
+        y: -200,
+        transition: { type: "spring", duration: 1.5, delay: 1 },
+      }}
+      animate={{
+        y: 0,
+        transition: { type: "spring", duration: 1.5, delay: 1 },
+      }}
+    >
       <Line click={click} />
       <Line click={click} />
       <Line click={click} />

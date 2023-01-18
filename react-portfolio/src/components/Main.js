@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
+import SoundBar from "../subComponents/SoundBar";
 import Intro from "./Intro";
 import { Logo } from "./AllSvgs";
 
@@ -160,7 +161,7 @@ const Main = () => {
         <PowerButton />
         <LogoComponent theme={click ? "dark" : "light"} />
         <SocialIcons />
-
+        <SoundBar />
         <Center click={click}>
           <Logo
             onClick={() => handleClick()}
