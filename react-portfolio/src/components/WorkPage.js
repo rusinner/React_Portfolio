@@ -10,7 +10,7 @@ import PowerButton from "../subComponents/PowerButton";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
 import BigTitle from "../subComponents/BigTitle";
-import AnimatedPage from "./AnimatedPage";
+import AnimatedPageRight from "./AnimatedPageRight";
 
 const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
@@ -37,7 +37,7 @@ const WorkPage = () => {
       <LogoComponent theme="light" />
       <SocialIcons theme="voop" />
       <PowerButton />
-      <AnimatedPage>
+      <AnimatedPageRight>
         <Box>
           <Main>
             {Work.map((d) => (
@@ -46,7 +46,7 @@ const WorkPage = () => {
           </Main>
           <BigTitle text="WORK" top="10%" right="20%" />
         </Box>
-      </AnimatedPage>
+      </AnimatedPageRight>
     </ThemeProvider>
   );
 };

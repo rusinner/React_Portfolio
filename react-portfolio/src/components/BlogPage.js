@@ -9,7 +9,7 @@ import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/AnchorComponent";
 import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
-import AnimatedPage from "./AnimatedPage";
+import AnimatedPageLeft from "./AnimatedPageLeft";
 
 const MainContainer = styled(motion.div)`
   background-image: url(${img});
@@ -63,7 +63,7 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <AnimatedPage>
+    <AnimatedPageLeft>
       <MainContainer>
         <Container>
           <LogoComponent />
@@ -80,7 +80,7 @@ const BlogPage = () => {
           <BigTitle text="BLOG" top="5rem" left="4rem" />
         </Container>
       </MainContainer>
-    </AnimatedPage>
+    </AnimatedPageLeft>
   );
 };
 
