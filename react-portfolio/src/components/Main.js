@@ -149,34 +149,12 @@ const DarkDiv = styled.div`
   }
 `;
 
-const MotionContainer = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.5,
-      duration: 0.5,
-    },
-  },
-};
 const Main = () => {
   const [click, setclick] = useState(false);
 
   const handleClick = () => setclick(!click);
   return (
-    <MainContainer
-      variants={MotionContainer}
-      initial="hidden"
-      animate="show"
-      exit={{
-        opacity: 0,
-        x: "100vw",
-
-        transition: { duration: 0.8 },
-      }}
-    >
+    <MainContainer>
       <DarkDiv click={click} />
       <Container>
         <PowerButton />
