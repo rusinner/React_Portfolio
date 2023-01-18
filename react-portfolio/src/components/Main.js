@@ -53,7 +53,8 @@ const Contact = styled.div`
   text-decoration: none;
   z-index: 1;
   @media screen and (max-width: 768px) {
-    top: 5.5rem;2  }
+    top: 5.5rem;
+  }
 `;
 
 const BLOG = styled(NavLink)`
@@ -140,6 +141,11 @@ const DarkDiv = styled.div`
   height: ${(props) => (props.click ? "100%" : "0%")};
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
+  @media screen and (max-width: 768px) {
+    top: -50%;
+    right: 0;
+    width: ${(props) => (props.click ? "100%" : ".3%")};
+  }
 `;
 
 const Main = () => {

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "usehooks-ts";
 
 import Me from "../assets/Images/profile-img.png";
 
@@ -10,7 +11,7 @@ const Box = styled(motion.div)`
   top: 50%;
   transform: translate(-50%, -50%);
   width: 65vw;
-  height: 40vh;
+
   display: flex;
   background: linear-gradient(to right, #fcf6f4 50%, #a80071 50%) bottom,
     linear-gradient(to right, #fcf6f4 50%, #a80071 50%) top;
@@ -18,8 +19,11 @@ const Box = styled(motion.div)`
   background-size: 100% 2px;
   border-left: 2px solid #fcf6f4;
   border-right: 2px solid #a80071;
-
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    transform: rotateZ(90deg);
+    transform-origin: 50% 0;
+  }
 `;
 
 const SubBox = styled.div`
@@ -35,9 +39,20 @@ const SubBox = styled.div`
     width: 100%;
     height: auto;
   }
+  @media screen and (max-width: 768px) {
+    transform: rotateZ(-90deg);
+    transform-origin: 0 50%;
+    top: 6rem;
+    left: 8rem;
+    .pic {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+  }
 `;
 
-const Text = styled.div`
+const Text = styled(motion.div)`
   font-size: calc(1em + 1.5vw);
   color: #000000;
   padding: 2rem;
@@ -58,16 +73,20 @@ const Text = styled.div`
     padding-bottom: 8rem;
   }
 `;
-
+export const useIsMedium = () => useMediaQuery("(min-width: 568px)");
 const Intro = () => {
   return (
     <Box
       initial={{ height: 0 }}
-      animate={{ height: "40vh" }}
+      animate={{ height: useIsMedium ? "40vh" : "20vh" }}
       transition={{ type: "spring", duration: 2, delay: 1 }}
     >
       <SubBox>
-        <Text>
+        <Text
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
+        >
           <h2>Hi, I am</h2>
           <h3> Thelogos Mavropoulos.</h3>
           <h6>In VooPROGue we design simple yet beautiful websites.</h6>
