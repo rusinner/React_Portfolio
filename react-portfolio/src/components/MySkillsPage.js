@@ -11,6 +11,7 @@ import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
 import BigTitle from "../subComponents/BigTitle";
+import AnimatedPage from "./AnimatedPage";
 
 const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
@@ -86,19 +87,6 @@ const Description = styled.div`
   }
 `;
 
-const MotionContainer = {
-  hidden: { opacity: 0, y: "100vh" },
-  show: {
-    opacity: 1,
-    y: "0",
-
-    transition: {
-      delayChildren: 0.8,
-      staggerChildren: 0.4,
-      duration: 0.5,
-    },
-  },
-};
 const Item = {
   hidden: {
     scale: 0,
@@ -117,63 +105,55 @@ const MySkillsPage = () => {
       <LogoComponent theme="light" />
       <SocialIcons theme="light" />
       <PowerButton />
-
-      <Box
-        variants={MotionContainer}
-        initial="hidden"
-        animate="show"
-        exit={{
-          opacity: 0,
-          y: "100vh",
-          transition: { duration: 0.5 },
-        }}
-      >
-        <ParticleComponent theme="light" />
-        <Main variants={Item}>
-          <Title>
-            <Develope width={40} height={40} /> Developer
-          </Title>
-          <Description>
-            I value business or brand for which i'm creating, thus i enjoy
-            bringing new ideas to life.
-          </Description>
-          <Description>
-            <strong>Skills</strong>
-            <p>
-              Html, Css, Js, PHP, SQL, React.js, Redux, Next.js, Node.js,
-              MongoDB, Sass, Bootstrap, Tailwind, Firebase, Wordpress
-            </p>
-          </Description>
-          <Description>
-            <strong>Tools</strong>
-            <p>VScode, Github </p>
-          </Description>
-        </Main>
-        <Main variants={Item}>
-          <Title>
-            <Design width={40} height={40} /> Designer
-          </Title>
-          <Description>
-            I love to create design which speaks, Keep it clean, minimal and
-            simple.
-          </Description>
-          <Description>
-            <strong>I like to Design</strong>
-            <ul>
-              <li>Web Design</li>
-              <li>Mobile Apps</li>
-            </ul>
-          </Description>
-          <Description>
-            <strong>Tools</strong>
-            <ul>
-              <li>Figma</li>
-              <li>Photoshop</li>
-            </ul>
-          </Description>
-        </Main>
-        <BigTitle text="SKILLS" top="74%" right="30%" />
-      </Box>
+      <AnimatedPage>
+        <Box>
+          <ParticleComponent theme="light" />
+          <Main variants={Item}>
+            <Title>
+              <Develope width={40} height={40} /> Developer
+            </Title>
+            <Description>
+              I value business or brand for which i'm creating, thus i enjoy
+              bringing new ideas to life.
+            </Description>
+            <Description>
+              <strong>Skills</strong>
+              <p>
+                Html, Css, Js, PHP, SQL, React.js, Redux, Next.js, Node.js,
+                MongoDB, Sass, Bootstrap, Tailwind, Firebase, Wordpress
+              </p>
+            </Description>
+            <Description>
+              <strong>Tools</strong>
+              <p>VScode, Github </p>
+            </Description>
+          </Main>
+          <Main variants={Item}>
+            <Title>
+              <Design width={40} height={40} /> Designer
+            </Title>
+            <Description>
+              I love to create design which speaks, Keep it clean, minimal and
+              simple.
+            </Description>
+            <Description>
+              <strong>I like to Design</strong>
+              <ul>
+                <li>Web Design</li>
+                <li>Mobile Apps</li>
+              </ul>
+            </Description>
+            <Description>
+              <strong>Tools</strong>
+              <ul>
+                <li>Figma</li>
+                <li>Photoshop</li>
+              </ul>
+            </Description>
+          </Main>
+          <BigTitle text="SKILLS" top="74%" right="30%" />
+        </Box>
+      </AnimatedPage>
     </ThemeProvider>
   );
 };

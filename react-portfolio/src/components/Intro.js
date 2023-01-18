@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useMediaQuery } from "usehooks-ts";
 
 import Me from "../assets/Images/profile-img.png";
 
@@ -11,7 +10,6 @@ const Box = styled(motion.div)`
   top: 50%;
   transform: translate(-50%, -50%);
   width: 65vw;
-
   display: flex;
   background: linear-gradient(to right, #fcf6f4 50%, #a80071 50%) bottom,
     linear-gradient(to right, #fcf6f4 50%, #a80071 50%) top;
@@ -21,8 +19,6 @@ const Box = styled(motion.div)`
   border-right: 2px solid #a80071;
   z-index: 1;
   @media screen and (max-width: 768px) {
-    transform: rotateZ(90deg);
-    transform-origin: 50% 0;
   }
 `;
 
@@ -38,16 +34,8 @@ const SubBox = styled.div`
     transform: translate(-50%, 0%);
     width: 100%;
     height: auto;
-  }
-  @media screen and (max-width: 768px) {
-    transform: rotateZ(-90deg);
-    transform-origin: 0 50%;
-    top: 6rem;
-    left: 8rem;
-    .pic {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 `;
@@ -60,25 +48,31 @@ const Text = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  @media screen and (max-width: 768px) {
+    padding-top: 0rem;
+  }
+
   & > *:last-child {
     padding-top: 1rem;
     color: #000000;
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
     @media screen and (max-width: 768px) {
+      font-size: calc(0.5rem + 2.5vw);
       padding-top: 0;
     }
   }
-  @media screen and (max-width: 768px) {
-    padding-bottom: 8rem;
+  h3 {
+    @media screen and (max-width: 768px) {
+    }
   }
 `;
-export const useIsMedium = () => useMediaQuery("(min-width: 568px)");
+
 const Intro = () => {
   return (
     <Box
       initial={{ height: 0 }}
-      animate={{ height: useIsMedium ? "40vh" : "20vh" }}
+      animate={{ height: "40vh" }}
       transition={{ type: "spring", duration: 2, delay: 1 }}
     >
       <SubBox>
@@ -88,7 +82,7 @@ const Intro = () => {
           transition={{ duration: 1, delay: 2 }}
         >
           <h2>Hi, I am</h2>
-          <h3> Thelogos Mavropoulos.</h3>
+          <h3> Theologos Mavropoulos.</h3>
           <h6>In VooPROGue we design simple yet beautiful websites.</h6>
         </Text>
       </SubBox>

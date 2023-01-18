@@ -10,6 +10,7 @@ import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
 import BigTitle from "../subComponents/BigTitle";
+import AnimatedPage from "./AnimatedPage";
 
 const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
@@ -66,19 +67,6 @@ const Main = styled(motion.div)`
 `;
 const SpacemanImg = styled(motion.img)``;
 
-const MotionContainer = {
-  hidden: { opacity: 0, y: "100vh" },
-  show: {
-    opacity: 1,
-    y: "0",
-
-    transition: {
-      delayChildren: 1.5,
-      staggerChildren: 0.5,
-      duration: 0.5,
-    },
-  },
-};
 const Item = {
   hidden: {
     scale: 0,
@@ -117,34 +105,27 @@ const AboutPage = () => {
       <LogoComponent theme="light" />
       <SocialIcons theme="voop" />
       <PowerButton />
+      <AnimatedPage>
+        <Box>
+          <ParticleComponent theme="dark" />
 
-      <Box
-        variants={MotionContainer}
-        initial="hidden"
-        animate="show"
-        exit={{
-          opacity: 0,
-          transition: { duration: 0.5 },
-        }}
-      >
-        <ParticleComponent theme="dark" />
-
-        <Main variants={Text}>
-          I'm a front-end developer located in Greece. I love to create simple
-          yet beautiful websites with great user experience.
-          <br />
-          <br /> I'm interested in the whole frontend stack Like trying new
-          things and building great projects. I love to code, design, read
-          books, travel and explore.
-          <br />
-          <br /> I believe everything is an Art when you put your consciousness
-          in it. You can connect with me via social links.
-        </Main>
-        <Spaceman>
-          <SpacemanImg variants={Item} src={astronaut} alt="astronaut" />
-        </Spaceman>
-        <BigTitle text="ABOUT" top="10rem" left="5rem" />
-      </Box>
+          <Main variants={Text}>
+            I'm a front-end developer located in Greece. I love to create simple
+            yet beautiful websites with great user experience.
+            <br />
+            <br /> I'm interested in the whole frontend stack Like trying new
+            things and building great projects. I love to code, design, read
+            books, travel and explore.
+            <br />
+            <br /> I believe everything is an Art when you put your
+            consciousness in it. You can connect with me via social links.
+          </Main>
+          <Spaceman>
+            <SpacemanImg variants={Item} src={astronaut} alt="astronaut" />
+          </Spaceman>
+          <BigTitle text="ABOUT" top="10rem" left="5rem" />
+        </Box>
+      </AnimatedPage>
     </ThemeProvider>
   );
 };

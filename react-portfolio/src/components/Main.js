@@ -14,7 +14,7 @@ import { Logo } from "./AllSvgs";
 const Container = styled.div`
   padding: 2rem;
 `;
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   background: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
@@ -54,6 +54,7 @@ const Contact = styled.div`
   z-index: 1;
   @media screen and (max-width: 768px) {
     top: 5.5rem;
+    position: fixed;
   }
 `;
 
@@ -148,12 +149,34 @@ const DarkDiv = styled.div`
   }
 `;
 
+const MotionContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.5,
+      duration: 0.5,
+    },
+  },
+};
 const Main = () => {
   const [click, setclick] = useState(false);
 
   const handleClick = () => setclick(!click);
   return (
-    <MainContainer>
+    <MainContainer
+      variants={MotionContainer}
+      initial="hidden"
+      animate="show"
+      exit={{
+        opacity: 0,
+        x: "100vw",
+
+        transition: { duration: 0.8 },
+      }}
+    >
       <DarkDiv click={click} />
       <Container>
         <PowerButton />

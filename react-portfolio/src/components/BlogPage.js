@@ -9,6 +9,7 @@ import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/AnchorComponent";
 import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
+import AnimatedPage from "./AnimatedPage";
 
 const MainContainer = styled(motion.div)`
   background-image: url(${img});
@@ -52,19 +53,6 @@ const Grid = styled.div`
   src="https://d23jutsnau9x47.cloudfront.net/studio/v1.5.1/viewer.js"
   data-option="{|id|:|63c5e95d6a3e92df9d648c59|}"
 ></script>;
-//framer motion config
-const MotionContainer = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.5,
-      duration: 0.5,
-    },
-  },
-};
 
 const BlogPage = () => {
   const [numbers, setNumbers] = useState(0);
@@ -75,31 +63,24 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <MainContainer
-      variants={MotionContainer}
-      initial="hidden"
-      animate="show"
-      exit={{
-        opacity: 0,
-
-        transition: { duration: 0.5 },
-      }}
-    >
-      <Container>
-        <LogoComponent />
-        <PowerButton />
-        <SocialIcons />
-        <AnchorComponent numbers={numbers} />
-        <Center>
-          <Grid>
-            {Blogs.map((blog) => (
-              <BlogComponent key={blog.id} blog={blog} />
-            ))}
-          </Grid>
-        </Center>
-        <BigTitle text="BLOG" top="5rem" left="4rem" />
-      </Container>
-    </MainContainer>
+    <AnimatedPage>
+      <MainContainer>
+        <Container>
+          <LogoComponent />
+          <PowerButton />
+          <SocialIcons />
+          <AnchorComponent numbers={numbers} />
+          <Center>
+            <Grid>
+              {Blogs.map((blog) => (
+                <BlogComponent key={blog.id} blog={blog} />
+              ))}
+            </Grid>
+          </Center>
+          <BigTitle text="BLOG" top="5rem" left="4rem" />
+        </Container>
+      </MainContainer>
+    </AnimatedPage>
   );
 };
 
