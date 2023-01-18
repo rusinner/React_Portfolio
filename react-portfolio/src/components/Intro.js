@@ -34,8 +34,12 @@ const SubBox = styled.div`
     transform: translate(-50%, 0%);
     width: 100%;
     height: auto;
+
     @media screen and (max-width: 768px) {
-      display: none;
+      background: #fcf6f4;
+      border-radius: 100% 100% 0 0;
+      transform: translateY(-230px);
+      opacity: 0.5;
     }
   }
 `;
