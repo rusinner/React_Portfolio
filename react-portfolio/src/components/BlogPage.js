@@ -36,7 +36,7 @@ const Center = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  pading-top: 10rem;
+  padding-top: 3rem;
 `;
 
 const Grid = styled.div`
