@@ -6,7 +6,7 @@ export const Blogs = [
     date: "16 February, 2023",
     imgSrc:
       "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/saIjdr9aSReTtmdVJcSi",
-    link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/javascript-flow-control",
+    link: "https://blog-next-app-phi.vercel.app/post/javascript-flow-control",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const Blogs = [
     date: "17 February, 2023",
     imgSrc:
       "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/9WPzxKdhT7iqdGSG24xu",
-    link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/react-ui-libraries",
+    link: "https://blog-next-app-phi.vercel.app/post/react-ui-libraries",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const Blogs = [
     date: "13 March, 2023",
     imgSrc:
       "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/MK7vRMxoRgiI8F6kXuk6",
-    link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/js-frameworks",
+    link: "https://blog-next-app-phi.vercel.app/post/js-frameworks",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const Blogs = [
     date: "13 March, 2023",
     imgSrc:
       "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/mffNQrd5TlC4phiGerSE",
-    link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/user-experience",
+    link: "https://blog-next-app-phi.vercel.app/post/user-experience",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const Blogs = [
     date: "13 March, 2023",
     imgSrc:
       "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/QCWddvIRFKIxdNa1LI1P",
-    link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/testing",
+    link: "https://blog-next-app-phi.vercel.app/post/testing",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export const Blogs = [
     date: "13 March, 2023",
     imgSrc:
       "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/8FI1m9fSyBjCoXADwWGw",
-    link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/deploy-github",
+    link: "https://blog-next-app-phi.vercel.app/post/deploy-github",
   },
 
   // {
