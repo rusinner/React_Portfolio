@@ -35,22 +35,24 @@ export const Blogs = [
       "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/mffNQrd5TlC4phiGerSE",
     link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/user-experience",
   },
-  // {
-  //   id: 5,
-  //   name: "What is Higher Order Component (HOC) in React JS?",
-  //   tags: ["react", "reactJS", "web-development"],
-  //   date: "3 Feb, 2021",
-  //   imgSrc: "",
-  //   link: "https://codebucks.hashnode.dev/what-is-higher-order-component",
-  // },
-  // {
-  //   id: 6,
-  //   name: "How to implement Pagination Component in React from scratch",
-  //   tags: ["react", "css"],
-  //   date: "5 Jan, 2021",
-  //   imgSrc: "",
-  //   link: "https://codebucks.hashnode.dev/pagination-in-react",
-  // },
+  {
+    id: 5,
+    name: "Characteristics of a good Test",
+    tags: ["testing", "reactJS", "web-development"],
+    date: "13 March, 2023",
+    imgSrc:
+      "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/QCWddvIRFKIxdNa1LI1P",
+    link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/testing",
+  },
+  {
+    id: 6,
+    name: "Deploying to GitHub Pages",
+    tags: ["deploy", "github", "git"],
+    date: "13 March, 2023",
+    imgSrc:
+      "https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/8FI1m9fSyBjCoXADwWGw",
+    link: "https://blog-next-ee8g8tqbs-rusinner.vercel.app/post/deploy-github",
+  },
 
   // {
   //   id: 7,
