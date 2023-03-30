@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 // import { NavLink } from "react-router-dom";
-import { Github, Facebook, Instagram } from "../components/AllSvgs";
+import { Github, LinkedIn, Instagram } from "../components/AllSvgs";
 import { voopTheme } from "../components/Themes";
 const Icons = styled.div`
   display: flex;
@@ -54,11 +54,11 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href="https://facebook.com/vooprogue"
+          href="https://www.linkedin.com/in/theologos-mavropoulos-55338a212/"
           rel="noreferrer"
         >
-          <Facebook
-            width={35}
+          <LinkedIn
+            width={32}
             height={32}
             fill={props.theme === "voop" ? voopTheme.text : voopTheme.body}
           />

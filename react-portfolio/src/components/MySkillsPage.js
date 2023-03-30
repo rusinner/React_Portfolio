@@ -113,8 +113,7 @@ const MySkillsPage = () => {
               <Develope width={40} height={40} /> Developer
             </Title>
             <Description>
-              I value business or brand for which i'm creating, thus i enjoy
-              bringing new ideas to life.
+              Ι enjoy creating from scratch and bringing new ideas to life.
             </Description>
             <Description>
               <strong>Skills</strong>
@@ -133,7 +132,7 @@ const MySkillsPage = () => {
               <Design width={40} height={40} /> Designer
             </Title>
             <Description>
-              I love to create design which speaks, Keep it clean, minimal and
+              I love to create targeted designs, Keep it clean, minimal and
               simple.
             </Description>
             <Description>

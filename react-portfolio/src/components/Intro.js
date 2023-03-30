@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import Me from "../assets/Images/profile-img.png";
+import Me from "../assets/Images/profileImg.png";
 
 const Box = styled(motion.div)`
   position: absolute;
@@ -32,7 +32,7 @@ const SubBox = styled.div`
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 100%;
+    width: 80%;
     height: auto;
 
     @media screen and (max-width: 768px) {

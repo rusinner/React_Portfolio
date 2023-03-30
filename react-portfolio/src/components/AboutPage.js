@@ -110,8 +110,8 @@ const AboutPage = () => {
           <ParticleComponent theme="dark" />
 
           <Main variants={Text}>
-            I'm a front-end developer located in Greece. I love to create simple
-            yet beautiful websites with great user experience.
+            I'm a web developer located in Greece. I love to create simple yet
+            beautiful and funky websites with great user experience.
             <br />
             <br /> I'm interested in the whole frontend stack Like trying new
             things and building great projects. I love to code, design, read
