@@ -30,9 +30,9 @@ const SubBox = styled.div`
   .pic {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%, 0%);
-    width: 80%;
+    width: 100%;
     height: auto;
 
     @media screen and (max-width: 768px) {
