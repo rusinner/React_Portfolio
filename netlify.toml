@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/*"
-  to = "/*"
+  from = "/work"
+  to = "/work"
   force = true # COMMENT: ensure that we always redirect
   status = 200
