@@ -1,4 +1,5 @@
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/*"
+  force = true # COMMENT: ensure that we always redirect
   status = 200
