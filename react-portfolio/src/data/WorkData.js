@@ -1,14 +1,15 @@
 export const Work = [
   {
     id: 1,
-    name: "Developer's Portfolio Template",
+    name: "LACF",
     description:
-      "React Portfolio Theme, using Sanity for Content management,framer motion for animations,scss",
-    tags: ["react", "sanity", "framer motion"],
+      "Next js Comics Festival Website,using shadcn components,contentful CMS for data entry,framer motion,gsap and tailwind css for styling.",
+    tags: ["react", "nextjs", "framer motion", "gsap", "contentful", "shadcn"],
 
-    demo: "https://vooprogue-template-portfolio-1.netlify.app/",
-    github: "https://github.com/rusinner/First_React_Portfolio",
+    demo: "https://lacf-five.vercel.app/",
+    github: "https://github.com/rusinner/LACF",
   },
+
   {
     id: 2,
     name: "Crypto News App",
@@ -88,5 +89,15 @@ export const Work = [
 
     demo: "https://react-ecommerce-app-ecru.vercel.app/",
     github: "https://github.com/rusinner/React_Ecommerce_App",
+  },
+  {
+    id: 10,
+    name: "Developer's Portfolio Template",
+    description:
+      "React Portfolio Theme, using Sanity for Content management,framer motion for animations,scss",
+    tags: ["react", "sanity", "framer motion"],
+
+    demo: "https://vooprogue-template-portfolio-1.netlify.app/",
+    github: "https://github.com/rusinner/First_React_Portfolio",
   },
 ];
