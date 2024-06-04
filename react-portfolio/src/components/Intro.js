@@ -45,13 +45,14 @@ const SubBox = styled.div`
 const Text = styled(motion.div)`
   font-size: calc(1em + 1.5vw);
   color: #000000;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   @media screen and (max-width: 768px) {
-    padding-top: 0rem;
+    padding-top: -4rem;
   }
 
   & > *:last-child {
