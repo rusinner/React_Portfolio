@@ -56,13 +56,13 @@ const Text = styled(motion.div)`
   }
 
   & > *:last-child {
-    padding-top: 1rem;
+    padding-top: -2rem;
     color: #000000;
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
     @media screen and (max-width: 768px) {
       font-size: calc(0.5rem + 2.5vw);
-      padding-top: 0;
+      padding-top: 0rem;
     }
   }
   h3 {
